@@ -26,7 +26,7 @@
   </head>
   <body>
     <h1>Registro de Artículos</h1>
-    <form name="form1" action="Insertar_Registros.php" method="GET">
+    <form name="form1" action="Insertar_Registro.php" method="get">
       <table border="0" align="center">
         <tr>
           <td>Sección Artículo</td>
@@ -40,13 +40,18 @@
         </tr>
         <tr>
           <td>Precio del Artículo</td>
-          <td><label for="Precio"></label>
-          <input type="number" name="precio" id="precio"></td>
+          <td><label for="precio"></label>
+          <input type="text" name="precio" id="precio"></td>
         </tr>
         <tr>
-          <td>Fecha de ingreso</td>
+          <td>Fecha de Ingreso</td>
           <td><label for="Fecha"></label>
-          <input type="date" name="precio" id="precio"></td>
+          <input type="date" name="Fecha" id="Fecha"></td>
+        </tr>
+        <tr>
+          <td>Condición de Importación</td>
+          <td><label for="Importacion"></label>
+          <input type="text" name="Importacion" id="Importacion"></td>
         </tr>
         <tr>
           <td>País de Origen</td>
@@ -59,7 +64,7 @@
         </tr>
         <tr>
           <td align="center" ><input type="submit" name="enviar" id="enviar" value="Enviar"></td>
-          <td align="center" ><input type="submit" name="borrar" id="borrar" value="Borrar"></td>
+          <td align="center" ><input type="reset" name="borrar" id="borrar" value="Borrar"></td>
         </tr>
       </table>
     </form>
