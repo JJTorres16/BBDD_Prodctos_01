@@ -8,7 +8,7 @@
     <?php
     require("datos_conexion.php");
     //$busqueda = $_GET("buscar");
-    $section=$_GET["seccion"];
+    $section=$_GET["seccion"];   
     $name=$_GET["nombre"];
     $price=$_GET["precio"];
     $date=$_GET["Fecha"];

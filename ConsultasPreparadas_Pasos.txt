@@ -1,0 +1,19 @@
+1.- Creamos una sentencia SQL sustituyendo los valores de criterio por el símbolo ?.
+        sql = "SELECT * FROM PRODUCTOS WHERE PAISDEORIGEN = ?"
+
+2.- Preparamos la consulta con la función mysqli_prepare(). Esta función requiere dos parámetros: el objeto conexión y
+    la sentencia sql.
+        $resultado = mysqli_prepare($conexion,$sql). La función devuelve un objeto tipo mysqli_stmt.
+
+3.- Unimos los parámetros a la sentencia sql. De esto se encarga la función msqli_stmt_bind_param(). Devuelve true o false.
+    Esta función requiere tres parámetros: el objeto mysqli_stmt(el objeto devuelto por mysqli_prepare), el tipo de dato que
+    se utilizará como criterio en sql, variable con criterio.
+
+4.- Ejecutar la consulta con la función msqli_stmt_execute(). Esta función devuelve true o false. Necesita como parámetro el objeto
+     mysqli_stmt.
+
+5.- Asociar variables al resultado de la consulta. Esto lo conseguimos con la función mysqli_stmt_bind_result().Devuelve true o false.
+    Necesita como parámetros el objeto mysqli_stmt y tantas variables como columnas en consulta sql.
+
+6.- Lectura de valores. Para ello utilizamos la función mysqli_stmt_fetc.
+    Pide como parámetro el objeto mysqli_stmt.
